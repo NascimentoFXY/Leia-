@@ -14,11 +14,10 @@ const Stack = createNativeStackNavigator();
 export default function AuthRoutes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='OptionsSelection' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='Intro' screenOptions={{headerShown: false}}>
         <Stack.Screen name="Intro" component={Intro} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="OptionsSelection" component={OptionsSelection} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );

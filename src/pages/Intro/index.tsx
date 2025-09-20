@@ -11,10 +11,13 @@ import {
 } from 'react-native';
 import { styles } from './style';
 import { colors } from '../../config/theme/colors';
+
+
+
 export default function Intro({ navigation }: any) {
     return (
         <View style={styles.container}>
-            <View style={styles.image}></View>
+            <View style={styles.image}/>
             <View style={styles.modal}>
 
                 <Text style={styles.title}>O Aplicativo de Livraria que irá facilitar sua vida</Text>
@@ -22,8 +25,10 @@ export default function Intro({ navigation }: any) {
 
                 <View style={styles.buttonContainer}>
 
-                    <TouchableOpacity style={styles.button1}><Text style={styles.text}>Faça login com a microsoft</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.button2} onPress={()=> navigation.navigate("OptionsSelection")}><Text style={styles.text}>Vamos começar</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.button1}>
+                        <Text style={styles.text}>Faça login com a microsoft</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate("Login")}><Text style={styles.text}>Vamos começar</Text></TouchableOpacity>
                 </View>
                 <View style={styles.createAc}>
                     <Text style={styles.text}>Ja tem uma conta?
@@ -32,7 +37,7 @@ export default function Intro({ navigation }: any) {
                         </TouchableOpacity>
                     </Text>
                 </View>
-        
+
 
             </View>
 

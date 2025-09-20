@@ -1,15 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Main from './src/pages/main';
-import Splash from './src/pages/splash';
+import { StyleSheet, View } from 'react-native';
 import AuthRoutes from './src/routes/authRoute';
-import { NavigationContainer } from '@react-navigation/native';
+import MainRoutes from './src/routes/mainRoute';
+import AuthProvider, {useAuth} from './src/context/auth';
+
+function Routes() {
+  const { isAuthenticated } = useAuth()!;
+
+  return isAuthenticated === false ? <AuthRoutes /> : <MainRoutes />;
+}
+
 export default function App() {
   return (
-    <View style={{flex: 1}}>
-  
-  
-      <AuthRoutes/>
-    </View>
+    <AuthProvider>
+      <View style={{ flex: 1 }}>
+        <Routes />
+      </View>
+    </AuthProvider>
   );
 }

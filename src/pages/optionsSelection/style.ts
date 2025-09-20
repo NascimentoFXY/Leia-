@@ -24,7 +24,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     flexGrow: 1,
     minWidth: 50,
-    
   },
   buttonContainer:{
     flexDirection: "row",
@@ -52,7 +51,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    marginTop: 50,
+  },
+  backButton:{
+    padding: 20,
+    justifyContent: "center"
   }
   
 });

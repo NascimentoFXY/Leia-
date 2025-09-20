@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 3,
     borderColor: colors.primary,
-    width: "auto"
+    width: "auto",
+    flexGrow: 1,
   },
   text: {
     fontSize: 20,
