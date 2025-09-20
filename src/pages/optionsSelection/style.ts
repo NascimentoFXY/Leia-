@@ -1,5 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import { colors } from '../../config/theme/colors';
+import { font } from '../../config/font/font';
 
 
 const { width, height } = Dimensions.get('window');
@@ -37,14 +38,14 @@ export const styles = StyleSheet.create({
     color: colors.terciary
   },
   title:{
-    fontSize: 20,
-    fontWeight: 800,
+    fontSize: 25,
     textAlign: "center",
+    fontFamily: font.primary
   },
   subtitle:{
     fontSize: 15,
-    fontWeight: 600,
     textAlign: "center",
+    fontFamily: font.primary
 
   },
   header:{

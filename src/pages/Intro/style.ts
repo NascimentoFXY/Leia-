@@ -1,5 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import { colors } from '../../config/theme/colors';
+import { font } from '../../config/font/font';
 
 const { width, height } = Dimensions.get('window');
 
@@ -22,15 +23,16 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: colors.terciary,
-    fontSize: 30,
-    fontWeight: 800,
-    textAlign: "center"
+    fontSize: 25,
+    textAlign: "center",
+    fontFamily: font.primary
   },
   subTitle: {
     color: colors.terciary,
     fontSize: 15,
     fontWeight: 600,
-    textAlign: 'justify'
+    textAlign: 'justify',
+    fontFamily: font.primary
   },
   buttonContainer: {
     justifyContent: "center",
@@ -55,6 +57,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     color: colors.terciary,
+
   },
   createAc: {
     width: "100%",

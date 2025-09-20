@@ -6,4 +6,8 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.secondary,
     },
+    section:{
+        flex:1,
+        paddingVertical:20,
+    }
 })

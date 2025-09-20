@@ -1,10 +1,11 @@
 import { StyleSheet, View, Text, TouchableOpacity,Image } from "react-native";
 import { colors } from "../../config/theme/colors";
 import { LinearGradient } from "expo-linear-gradient";
+import { font } from "../../config/font/font";
 interface bookDataProps {
     id?: string,
     bookName: string,
-    desc: string,
+    autor: string,
     rating: string,
     image?: any
 }
@@ -26,7 +27,7 @@ export default function Cards(data: bookDataProps) {
             >
                 <View style={styles.infoContainer}>
                     <Text style={styles.bookName}>{data.bookName}</Text>
-                    <Text style={styles.desc}>{data.desc}</Text>
+                    <Text style={styles.desc}>{data.autor}</Text>
                 </View>
             </LinearGradient>
         </TouchableOpacity>
@@ -46,7 +47,9 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 20,
         right: 20,
-        backgroundColor: colors.primary,
+        backgroundColor: "#000",
+        borderColor: colors.primary,
+        borderWidth: 2,
         width: 60,
         height: 60,
         borderRadius: 100,
@@ -58,12 +61,13 @@ const styles = StyleSheet.create({
         fontWeight: 600
     },
     desc: {
-        color: colors.terciary
+        color: colors.terciary,
     },
     bookName:{
         fontSize: 20,
         color: colors.terciary,
         fontWeight: 600,
+        fontFamily: font.primary
     },
     infoContainer:{
         padding: 10,

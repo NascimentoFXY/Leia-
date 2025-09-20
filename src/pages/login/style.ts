@@ -1,5 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import { colors } from '../../config/theme/colors';
+import { font } from '../../config/font/font';
 
 
 const { width, height } = Dimensions.get('window');
@@ -14,12 +15,14 @@ export const styles = StyleSheet.create({
     color: colors.terciary,
     fontWeight: 800,
     fontSize: 30,
-    textAlign: "center"
+    textAlign: "center",
+    fontFamily: font.primary
   },
   subTitle: {
     color: colors.terciary,
     fontWeight: 500,
-    fontSize: 25,
+    fontSize: 20,
+    fontFamily: font.primary
   },
   userImage:{
     width: 120,
