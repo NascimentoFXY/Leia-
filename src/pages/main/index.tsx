@@ -10,7 +10,7 @@ const booksList = [
     {
         id: "1",
         Rating: "5.0",
-        Name: "Nome Livro",
+        Name: "1984",
         Description: "Descrição livro",
         Image: require("../../assets/images/1984.jpg")
     },
