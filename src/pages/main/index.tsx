@@ -4,7 +4,6 @@ import { colors } from "../../config/theme/colors";
 import { styles } from "./style";
 import { Header } from "../../components/Header";
 import Icon from "../../icons";
-import HeaderInput from "../../components/Header/headerInput";
 import Cards from "../../components/Cards";
 import { MainSections } from "../../components/Main";
 const booksList = [
@@ -33,14 +32,33 @@ const booksList = [
 export default function Main({ navigation }: any) {
     return (
         <View style={styles.container}>
+            {/* Todos os tipos de header já estão feitos, inclusive com o text input, dá uma olhada lá no src/compontents/header 
+                pra usar é bem simples, basta colocar Header.Root como wrapper, e usar Header.Input pra usar o campo de texto
 
+
+                exemplo: 
+
+                <Header.Root>
+                    <Header.Title text="Leia+" />
+   ==================  <Header.Input> ================
+                        <Header.Buttons style={{ gap: 15 }}>
+                            <Header.Button content={<Icon.Feather name="search" color={colors.terciary} size={35} />} />
+                            <Header.Button content={<Icon.Ionicons name="notifications" color={colors.terciary} size={35} />} />
+                        </Header.Buttons>
+   ==================  </Header.Input> ===============
+                </Header.Root>
+
+
+                todos os compontentes do header permite estilização, só adicionar style={}
+            */}
+            
             <View>
                 <Header.Root>
                     <Header.Title text="Leia+" />
-                    <Header.Buttons style={{ gap: 15 }}>
-                        <Header.Button content={<Icon.Feather name="search" color={colors.terciary} size={35} />} />
-                        <Header.Button content={<Icon.Ionicons name="notifications" color={colors.terciary} size={35} />} />
-                    </Header.Buttons>
+                        <Header.Buttons style={{ gap: 15 }}>
+                            <Header.Button content={<Icon.Feather name="search" color={colors.terciary} size={35} />} />
+                            <Header.Button content={<Icon.Ionicons name="notifications" color={colors.terciary} size={35} />} />
+                        </Header.Buttons>
                 </Header.Root>
             </View>
             <ScrollView>

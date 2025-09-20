@@ -20,7 +20,7 @@ export const AuthContext = createContext<AuthContextData | null>(null);
 
 export default function AuthProvider({ children }: { children: React.ReactNode }) {
     const [user, setUser] = useState(null)
-    const [authenticaded, setAuthenticaded] = useState(true)
+    const [authenticaded, setAuthenticaded] = useState(false)
     const authUser = (value: boolean) => {
         setAuthenticaded(value)
     }
